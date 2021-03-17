@@ -1,0 +1,37 @@
+#Sysops exam guide
+https://d1.awsstatic.com/training-and-certification/docs-sysops-associate/AWS-Certified-SysOps-Administrator-Associate_Exam-Guide_C02.pdf
+
+#AWS CLI install docs
+https://docs.aws.amazon.com/cli/latest/userguide/install-cliv2.html
+
+#AWS CLI configuration docs
+https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-configure.html
+
+#Services that publish to CloudWatch Logs
+https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/aws-services-sending-logs.html
+
+#CloudWatch Logs Insights query syntax
+https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/CWL_QuerySyntax.html
+
+#CloudWatch Logs subscription filters
+https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/SubscriptionFilters.html
+
+#Kinesis Firehose destinations
+https://docs.aws.amazon.com/firehose/latest/dev/create-destination.html
+
+#CloudWatch Agent install using SSM
+https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/installing-cloudwatch-agent-ssm.html
+
+#CloudWatch Alarm terms and concepts
+https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/AlarmThatSendsEmail.html
+
+#CloudWatch Logs metric filter syntax
+https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/FilterAndPatternSyntax.html
+
+#CloudWatch Dashboard basics
+https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch_Dashboards.html
+
+#SNS Subscriber options
+https://docs.aws.amazon.com/sns/latest/dg/sns-create-subscribe-endpoint-to-topic.html
+
+
