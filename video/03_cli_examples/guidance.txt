@@ -1,0 +1,17 @@
+#Here are some examples, ranging from simple to complex, using the AWS CLI
+
+aws ec2 describe-instances --region REGION --output json 
+
+aws ec2 describe-instances --region REGION --output table
+
+aws ec2 describe-instances --region REGION --output yaml
+
+aws ec2 describe-instances --region REGION --output yaml
+
+aws ec2 describe-instances --region REGION --output yaml --no-cli-pager
+
+aws ec2 describe-instances --region REGION --output yaml --no-cli-pager --color on
+
+aws ec2 describe-instances --region REGION --query \
+'Reservations[].Instances[?LaunchTime>=`2020-12-31`][].[join(`,`,Tags[?Key==`Name`].Value),InstanceId, LaunchTime]' \
+ |tr -s '\t' ','
