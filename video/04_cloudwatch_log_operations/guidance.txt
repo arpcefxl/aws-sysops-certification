@@ -1,0 +1,7 @@
+#Create a log group
+
+#Configure expiration on a log group
+
+#Tail a log group
+
+#Execute a CloudWatch Logs Insights query

@@ -1,0 +1,5 @@
+#Metric filters for CloudTrail logs
+
+#Navigate to the region where CloudTrail is enabled
+
+#Navigate to the CloudWatch logs dashboard and select the CloudTrail log group

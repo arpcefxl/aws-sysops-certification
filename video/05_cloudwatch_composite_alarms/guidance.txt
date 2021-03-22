@@ -1,0 +1,5 @@
+#Use the CloudFormation template to launch 3 EC2 instances
+
+#Use the console to create individual alarms on CPU usage
+
+#Use the console to create a composite alarm
