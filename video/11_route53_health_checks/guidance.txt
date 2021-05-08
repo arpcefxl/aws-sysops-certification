@@ -1,0 +1,14 @@
+# Navigate to the Route 53 dashboard
+# Select Health Checks
+# Select Create Health Check
+
+# name the health check
+# select Endpoint
+# Specify Domain name
+# HTTPS protocol
+# aws.amazon.com Domain name
+# port 443
+# leave path empty
+# Select Next
+
+# On the second page, select Create Health Check
