@@ -9,7 +9,7 @@
   },
   {
     "ParameterKey": "INSTANCETYPE",
-    "ParameterValue": "db.t3.micro"
+    "ParameterValue": "db.r5.large"
   },
   {
     "ParameterKey": "SGID",
