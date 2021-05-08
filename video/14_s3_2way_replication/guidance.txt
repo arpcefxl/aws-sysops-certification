@@ -1,0 +1,12 @@
+# First, edit the s3 creation script and populate the variables
+# Then, execute the S3 creation script to create buckets and generate test data
+
+# Navigate to the S3 console, and select the first bucket
+# Click on the Management tab, scroll down and select "Create Replication Rule"
+# Configure replication to bucket2
+# Then follow the same procedure on bucket2, configuring replication to bucket1
+
+# To test the replication, upload different files to bucket1 and bucket2
+# Wait for up to 15 minutes, then check each bucket to ensure replication was successful
+# Note that the original files uploaded to each bucket will NOT replicate
+# It is left as an exercise to manually sync the object content to the other bucket
