@@ -1,0 +1,22 @@
+[
+  {
+    "ParameterKey": "DBUSER",
+    "ParameterValue": "root"
+  },
+  {
+    "ParameterKey": "DBPASS",
+    "ParameterValue": "changeme"
+  },
+  {
+    "ParameterKey": "INSTANCETYPE",
+    "ParameterValue": "db.t3.micro"
+  },
+  {
+    "ParameterKey": "SGID",
+    "ParameterValue": "sg-07974c9f523609b68"
+  },
+  {
+    "ParameterKey": "SUBNETLIST",
+    "ParameterValue": "subnet-7de82230, subnet-0a3c3b56, subnet-4c83b82b"
+  }
+]
