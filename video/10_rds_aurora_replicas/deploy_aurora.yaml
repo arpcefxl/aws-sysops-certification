@@ -62,5 +62,5 @@ Resources:
     Properties:
       Engine: aurora
       DBClusterIdentifier: !Ref "DBCluster"
-      DBInstanceClass: !FindInMap [!Ref "AWS::AccountId", !Ref "AWS::Region", "InstanceType"]
+      DBInstanceClass: !Ref "INSTANCETYPE"
       DBSubnetGroupName: !Ref "DatabaseSubnetGroup"
