@@ -4,13 +4,13 @@ AWSTemplateFormatVersion: 2010-09-09
 Description: A simple deployment of Aurora MySQL
 
 Parameters:
-  DatabaseUsername:
+  DBUSER:
     AllowedPattern: "[a-zA-Z0-9]+"
     Description: The database admin account user name, between 1 to 16 alphanumeric characters.
     MaxLength: '16'
     MinLength: '1'
     Type: String
-  DatabasePassword:
+  DBPASS:
     AllowedPattern: "[a-zA-Z0-9]+"
     Description: The database admin account password, between 8 to 41 alphanumeric characters.
     MaxLength: '41'
@@ -32,12 +32,12 @@ Metadata:
       - Label:
           default: Database Configuration
         Parameters:
-          - DatabaseUsername
-          - DatabasePassword
+          - DBUSER
+          - DBPASS
     ParameterLabels:
-      DatabaseUsername:
+      DBUSER:
         default: Database Username
-      DatabasePassword:
+      DBPASS:
         default: Database Password
 
 Resources:
@@ -51,8 +51,8 @@ Resources:
     Type: AWS::RDS::DBCluster
     Properties:
       Engine: aurora
-      MasterUsername: !Ref "DatabaseUsername"
-      MasterUserPassword: !Ref "DatabasePassword"
+      MasterUsername: !Ref "DBUSER"
+      MasterUserPassword: !Ref "DBPASS"
       BackupRetentionPeriod: 1
       DBSubnetGroupName: !Ref "DatabaseSubnetGroup"
       VpcSecurityGroupIds: !Ref "SGID"
