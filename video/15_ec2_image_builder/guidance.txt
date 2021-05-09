@@ -1,0 +1,3 @@
+# Create a component that touches a file on the filesystem
+# Create an Image Builder recipe including CWA and AWS CLIv2
+# Use the recipe to create an Image Builder Pipeline
