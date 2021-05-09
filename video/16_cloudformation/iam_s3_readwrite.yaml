@@ -1,0 +1,43 @@
+---
+AWSTemplateFormatVersion: 2010-09-09
+
+Description: A CloudFormation template to create an IAM Policy to attach to a single user
+
+Parameters:
+  USERNAME:
+    Description: The IAM account user name, between 1 to 16 alphanumeric characters.
+    MaxLength: '32'
+    MinLength: '1'
+    Type: String
+
+Resources:
+  users3readwritepolicy:
+    Type: AWS::IAM::Policy
+    Properties:
+      PolicyName: !Join
+        - ''
+        - - 's3_readwrite_'
+          - !Ref USERNAME
+      PolicyDocument:
+        Version: '2012-10-17'
+        Statement:
+        - Effect: Allow
+          Action:
+          - s3:ListAllMyBuckets
+          Resource: arn:aws:s3:::*
+        - Effect: Allow
+          Action:
+          - s3:ListBucket*
+          - s3:Get*
+          - s3:PutObject*
+          - s3:CreateMultipartUpload
+          - s3:DeleteObject
+          - s3:DeleteObjectVersion
+          Resource:
+            - arn:aws:s3:::bucket1
+            - arn:aws:s3:::bucket1/*
+            - arn:aws:s3:::bucket2
+            - arn:aws:s3:::bucket2/*
+      Users:
+      - !Ref USERNAME
+

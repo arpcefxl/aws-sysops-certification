@@ -1,0 +1,11 @@
+# The attached cloudformation template will create a policy that can be
+# attached to a single IAM user for their unique S3 read/write permissions
+# The intent would be to create one template (or object) for each IAM user
+# The IAM policy is attached INLINE to the user, which is one way of achieving least privilege
+# by assigning unique permissions to each user with exactly the permissions they need
+
+# Replace the "s3test" below with the username you're planning to modify
+# so that the stack is clearly labeled
+# Also note that stack names cannot have underscores
+
+aws cloudformation create-stack --stack-name iam-s3-readwrite-s3test --template-body file://iam_s3_readwrite.yaml --parameters file://iam_s3_readwrite_parameters.json --region us-east-1 --capabilities CAPABILITY_IAM
