@@ -1,0 +1,2 @@
+# This demo will create a patch group and a patch baseline that can be
+# applied to Amazon Linux 2 instances as the default for the region

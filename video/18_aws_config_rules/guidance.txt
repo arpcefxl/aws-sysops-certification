@@ -1,0 +1,6 @@
+# Navigate to the AWS Config dashboard and select Rules on the left hand nav
+# Click on Add Rule
+# in the search box, enter "access-keys-rotated" and select the rule
+# Click Next, scroll down to Trigger and select the appropriate schedule
+# Scroll down and update the maxAccessKeyAge parameter
+# Click Next, then Add Rule 
