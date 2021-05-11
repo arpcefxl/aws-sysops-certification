@@ -1,0 +1,12 @@
+# Navigate to the Organizations console and select Policies on the left-hand nav
+# Click on Service Control Policies, then Create Policy
+# Either build a policy using the configurator, or you can paste deny_ec2_termination.json
+# Organizations defaults to using an all-permissive SCP, so you can add a deny
+# statement without breaking everything else, but make sure you have that permissive SCP
+# in place first.
+
+# After creating the policy, click on AWS Accounts on the left-hand nav, then locate the OU
+# or account you want to attach, and click on it.
+# In the Policies tab, you can then see what SCPs apply to the OU or account
+# and you can add your newly created policy, then test an EC2 launch/terminate.
+# The terminate will fail, and you'll have to detach the SCP to complete the task
