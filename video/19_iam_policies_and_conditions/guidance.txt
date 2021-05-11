@@ -1,0 +1,5 @@
+# The deny_ec2_launch.json policy will prevent a user from launching an instance
+# unless both Name and costcenter tags are defined
+
+# The allow_ec2_read.json policy will deny any ec2 read operations (like describe-instances)
+# unless the operation is performed through a specific VPC Interface Endpoint
