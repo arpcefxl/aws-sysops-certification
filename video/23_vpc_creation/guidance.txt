@@ -1,0 +1,11 @@
+# Following the VPC order of operations:
+# VPC
+# Public Subnets
+# IGW
+# Public Route Table (attached to Public Subnets)
+# Private Subnets
+# NAT GW
+# Private Route Table (attached to Private Subnets)
+# VPC-only Subnets
+# VPC-only Route Table (attached to VPC-only Subnets)
+# NACL to block Public<-->VPC-only subnet traffic
