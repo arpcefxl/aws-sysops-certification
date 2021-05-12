@@ -1,0 +1,20 @@
+# If you don't have any endpoints in separate regions that you can use,
+# execute the script ./generate_eips.sh, which will allocate one Elastic IP
+# in each of two regions. The regions are specified as two command line options
+
+
+# If you don't have an existing zone, execute ./generate_zone.sh with the command
+# line option for the zone name. The zone will be private, and cannot be resolved
+# from the Internet
+
+# After allocating endpoints and creating the zone, Navigate to the Route 53 dashboard
+# Select the newly created zone
+# Click on "Create Record"
+# Enter a record name
+# Paste in one of the newly created EIPs in Value for A record type
+# Change the Routing policy to Geolocation and select the location for the EIP
+# For location, you can choose from continents, countries or US states
+
+# Click on "Add Another Record", enter the SAME record name
+# Paste in the second EIP, change the routing policy and select Default for location
+# Click on "Create Records"
