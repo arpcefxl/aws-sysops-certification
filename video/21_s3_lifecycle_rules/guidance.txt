@@ -1,0 +1,5 @@
+# If you don't already have an S3 bucket, you can use the script
+# ./create-bucket.sh <region> <bucketname> to create one
+
+# Navigate to the S3 console, click on the newly created bucket,
+# select the Management tab, and then Create lifecycle rule
