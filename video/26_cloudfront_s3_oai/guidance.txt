@@ -1,0 +1,21 @@
+# Create S3 bucket for Origin
+./create-bucket.sh <bucketname> <region>
+
+# Create OAI
+# Under Security (left-hand nav), select Origin Access Identity
+# Click on Create Origin Access Identity, enter a comment
+# Click Create
+
+# Create CloudFront Distribution
+# Navigate to the CloudFront dashboard
+# Click on Create Distribution
+# Click on "Get Started"
+# Enter the s3 bucket name for Origin Domain Name and select the bucket
+# Change the "Restrict Bucket Access" radio button to Yes 
+# For OAI, choose the newly created OAI in "Your Identities"
+# Change the "Grant Read Permissions on Bucket" radio button to Yes
+
+# Navigate to the S3 dashboard, and click on the newly created bucket name
+# Click on the Permissions tab, then scroll down to Bucket Policy
+# View the newly created policy to see how the OAI is used for access
+# Modify as desired to provide more permissions (default is download-only)
