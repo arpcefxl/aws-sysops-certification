@@ -1,0 +1,8 @@
+# Navigate to the Billing Console
+# Select Cost Allocation Tags on the left-hand nav
+# Select the User-defined cost allocation tags tab
+
+# You should see a list of tags that have already been used in your account
+# If this list is empty, you haven't used tags
+# Newly used tags will show up in this list in up to 24 hours after first use
+# Activating tags will cause them to show up in the cost allocation report within 24 hours
