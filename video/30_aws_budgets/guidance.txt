@@ -1,0 +1,18 @@
+# Navigate to the Budgets dashboard
+# Click on "Create a Budget" and select "Cost Budget" then "Set Your Budget"
+
+# Name: <NAME>
+# Period: Monthly
+# Budget effective dates: Recurring budget
+# Fixed (radio button)
+# Budgeted amount: <AMOUNT>
+# Addional budget parameters: <AS DESIRED>
+
+# Click on "Configure Thresholds"
+
+# Forecasted costs (radio button)
+# Alert threshold: 100%
+# Notifications: <enter your email>
+
+# Click on "Confirm budget"
+# Click on "Create"
