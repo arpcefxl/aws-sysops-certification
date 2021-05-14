@@ -1,5 +1,5 @@
 # install Terraform on Amazon Linux 2 for deploying the infrastructure
-# https://techviewleo.com/install-terraform-on-amazon-linux/
+./terraform-install-amazonlinux2.sh
 
 # After the infrastructure is deployed in us-west-2, fix all the broken
 # configuration until you can log into one EC2 instance and ping the other
