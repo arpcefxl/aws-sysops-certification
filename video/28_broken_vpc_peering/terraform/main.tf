@@ -34,6 +34,10 @@ route {
       cidr_block = "0.0.0.0/0"
       gateway_id = "${aws_internet_gateway.igw1.id}"
   }
+route {
+      cidr_block = "10.2.0.0/16"
+      vpc_peering_connection_id = aws_vpc_peering_connection.peering_connection.id
+  }
   tags = {
     Name = "vpc1"
   }
@@ -124,6 +128,12 @@ resource "aws_security_group" "ssh_from_home2" {
       to_port     = 22
       protocol    = "tcp"
       cidr_blocks = ["208.76.0.0/22"]
+  }
+  ingress {
+      from_port   = 0
+      to_port     = 0
+      protocol    = "-1"
+      cidr_blocks = ["10.1.0.0/16"]
   }
  egress {
     from_port   = 0
