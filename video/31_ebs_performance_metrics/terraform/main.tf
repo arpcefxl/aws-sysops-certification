@@ -69,14 +69,20 @@ resource "aws_instance" "test1" {
   instance_type = "${var.instance_type}"
   subnet_id = "${aws_subnet.subnet1_public.id}"
   vpc_security_group_ids = ["${aws_security_group.ssh_from_home1.id}"]
+  iam_instance_profile = "${aws_iam_instance_profile.ec2_ssm_cwa.name}"
   key_name = "csmithaws"
   tags = {
     Name = "vpc1"
-    ssh = "true"
+    ssm = "true"
   }
 }
 
-resource "aws_iam_role" "ec2_ssm_cwa" {
+resource "aws_iam_instance_profile" "ec2_ssm_cwa" {
+  name = "test_profile"
+  role = "${aws_iam_role.test_role.name}"
+}
+
+resource "aws_iam_role" "test_role" {
   name = "test_role"
   assume_role_policy = jsonencode({
     Version = "2012-10-17"
@@ -94,11 +100,11 @@ resource "aws_iam_role" "ec2_ssm_cwa" {
 }
 
 resource "aws_iam_role_policy_attachment" "attach-cwa-policy" {
-  role       = aws_iam_role.ec2_ssm_cwa.name
+  role       = aws_iam_role.test_role.name
   policy_arn = "arn:aws:iam::aws:policy/CloudWatchAgentAdminPolicy"
 }
 
 resource "aws_iam_role_policy_attachment" "attach-ssm-policy" {
-  role       = aws_iam_role.ec2_ssm_cwa.name
+  role       = aws_iam_role.test_role.name
   policy_arn = "arn:aws:iam::aws:policy/service-role/AmazonEC2RoleforSSM"
 }
