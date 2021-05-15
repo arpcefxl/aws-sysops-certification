@@ -1,0 +1,3 @@
+# Open a browser and navigate to instances.vantage.sh
+# This site can be used to perform direct comparisons of different
+# instance types for EC2 and for RDS
