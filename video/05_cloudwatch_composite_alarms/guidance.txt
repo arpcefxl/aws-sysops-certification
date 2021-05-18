@@ -1,5 +1,21 @@
-#Use the CloudFormation template to launch 3 EC2 instances
+#Use the Terraform template to launch 3 EC2 instances
+cd terraform
+terraform init
+terraform plan
+terraform apply
 
 #Use the console to create individual alarms on CPU usage
+# Select metric for instance1 cpu
+# Enter threshold of 50
+# No actions required
+# Select metric for instance2 cpu
+# Enter threshold of 50
+# No actions required
+# Select metric for instance3 cpu
+# Enter threshold of 50
+# No actions required
 
 #Use the console to create a composite alarm
+# Select the 3 newly created alarms and click on Create composite alarm
+# Remove the one default notification, select a name
+# Click on "Create composite alarm"

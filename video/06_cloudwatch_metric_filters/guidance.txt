@@ -1,5 +1,21 @@
-#Metric filters for CloudTrail logs
+# Navigate to the region where CloudTrail is enabled
+# Click on the log group containing CloudTrail logs
+# Select the Metric filters tab
+# Click on "Create metric filter"
+# Paste one of the following filters:
 
-#Navigate to the region where CloudTrail is enabled
+# Root account usage
+{$.userIdentity.type="Root" && $.userIdentity.invokedBy NOT EXISTS && $.eventType !="AwsServiceEvent"}
 
-#Navigate to the CloudWatch logs dashboard and select the CloudTrail log group
+OR
+
+# AWS Console login failures
+{($.eventName=ConsoleLogin) && ($.errorMessage="Failed authentication")}
+
+# Click Next
+# Filter Name: TestFilter
+# Metric Namespace: TestNameSpace
+# Metric Name: TestMetric
+# Metric Value: 1
+# Click Next
+# Click on "Create metric filter"

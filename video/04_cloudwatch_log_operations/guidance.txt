@@ -1,7 +1,20 @@
 #Create a log group
+# Navigate to the CloudWatch dashboard and select Logs on the left-hand nav
+# Click on Create log group
+# Enter a log group name
+# Click on Create
 
 #Configure expiration on a log group
+# Click the checkbox next to an existing log group
+# Click on Actions, then "Edit retention settings(s)"
+# Set the expiration age for log entries
+# Click on Save
 
 #Tail a log group
+aws logs tail group_name <GROUP_NAME> --follow --region <REGION>
 
 #Execute a CloudWatch Logs Insights query
+# Click on the log group containing CloudTrail logs and select "View in Logs Insights"
+# Enter the following query:
+stats count(*) by eventSource, eventName, awsRegion
+# Click on Run query
