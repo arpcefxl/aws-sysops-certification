@@ -6,8 +6,6 @@ aws ec2 describe-instances --region REGION --output table
 
 aws ec2 describe-instances --region REGION --output yaml
 
-aws ec2 describe-instances --region REGION --output yaml
-
 aws ec2 describe-instances --region REGION --output yaml --no-cli-pager
 
 aws ec2 describe-instances --region REGION --output yaml --no-cli-pager --color on

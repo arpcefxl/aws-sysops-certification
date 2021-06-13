@@ -11,7 +11,7 @@
 # Click on Save
 
 #Tail a log group
-aws logs tail group_name <GROUP_NAME> --follow --region <REGION>
+aws logs tail <GROUP_NAME> --follow --region <REGION>
 
 #Execute a CloudWatch Logs Insights query
 # Click on the log group containing CloudTrail logs and select "View in Logs Insights"

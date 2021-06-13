@@ -13,10 +13,11 @@
   },
   {
     "ParameterKey": "SGID",
-    "ParameterValue": "sg-07974c9f523609b68"
+    "ParameterValue": "sg-ddd4a599"
   },
   {
     "ParameterKey": "SUBNETLIST",
-    "ParameterValue": "subnet-7de82230, subnet-0a3c3b56, subnet-4c83b82b"
+    "ParameterValue": "subnet-103b055a, subnet-c9305eae, subnet-4c760362"
+
   }
 ]

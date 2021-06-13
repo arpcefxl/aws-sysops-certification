@@ -77,13 +77,14 @@ resource "aws_instance" "test1" {
   }
 }
 
+
 resource "aws_iam_instance_profile" "ec2_ssm_cwa" {
-  name = "test_profile"
-  role = "${aws_iam_role.test_role.name}"
+  name = "test_profile_cwa"
+  role = "${aws_iam_role.test_role_cwa.name}"
 }
 
-resource "aws_iam_role" "test_role" {
-  name = "test_role"
+resource "aws_iam_role" "test_role_cwa" {
+  name = "test_role_cwa"
   assume_role_policy = jsonencode({
     Version = "2012-10-17"
     Statement = [
@@ -100,11 +101,12 @@ resource "aws_iam_role" "test_role" {
 }
 
 resource "aws_iam_role_policy_attachment" "attach-cwa-policy" {
-  role       = aws_iam_role.test_role.name
+  role       = aws_iam_role.test_role_cwa.name
   policy_arn = "arn:aws:iam::aws:policy/CloudWatchAgentAdminPolicy"
 }
 
 resource "aws_iam_role_policy_attachment" "attach-ssm-policy" {
-  role       = aws_iam_role.test_role.name
+  role       = aws_iam_role.test_role_cwa.name
   policy_arn = "arn:aws:iam::aws:policy/service-role/AmazonEC2RoleforSSM"
 }
+
