@@ -1,0 +1,5 @@
+# If you already have an existing Aurora database cluster you can perform the steps on it
+# Otherwise, deploy the cluster using the CloudFormation template
+
+# Navigate to the RDS Console and select the Database cluster
+# Under "Actions", select "Add Reader"
