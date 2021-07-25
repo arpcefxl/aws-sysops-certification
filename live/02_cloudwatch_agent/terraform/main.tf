@@ -8,7 +8,6 @@ resource "aws_vpc" "vpc1" {
   enable_dns_hostnames = true
   tags = {
     Name = "vpc1"
-    ssm = "true"
   }
 }
 
@@ -16,7 +15,6 @@ resource "aws_internet_gateway" "igw1" {
   vpc_id = "${aws_vpc.vpc1.id}"
   tags = {
     Name = "vpc1"
-    ssm = "true"
   }
 }
 
@@ -27,7 +25,6 @@ resource "aws_subnet" "subnet1_public" {
   availability_zone = "${var.availability_zone}"
   tags = {
     Name = "vpc1"
-    ssm = "true"
   }
 }
 
@@ -77,6 +74,7 @@ resource "aws_instance" "test1" {
   tags = {
     Name = "vpc1"
     ssm = "true"
+    costcenter = "demo"
   }
 }
 
@@ -90,6 +88,7 @@ resource "aws_instance" "test2" {
   tags = {
     Name = "vpc1"
     ssm = "true"
+    costcenter = "demo"
   }
 }
 
@@ -103,6 +102,7 @@ resource "aws_instance" "test3" {
   tags = {
     Name = "vpc1"
     ssm = "true"
+    costcenter = "demo"
   }
 }
 
