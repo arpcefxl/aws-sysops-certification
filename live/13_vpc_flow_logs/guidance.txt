@@ -1,0 +1,17 @@
+# Create an IAM Role for delivery from the Flow log to CloudWatch Logs
+aws iam create-role --assume-role-policy-document file://trustpolicy.json --role-name flow-logs-test 
+aws iam put-role-policy --role-name flow-logs-test --policy-name flow-logs-policy --policy-document file://permissionspolicy.json
+
+# Create a new CloudWatch Log group
+aws logs create-log-group --log-group-name NAME --region REGION
+
+# Navigate to the VPC dashboard, and select the Default VPC
+# with CIDR range 172.31.0.0/16
+# Make sure you're in the same region as the new Log group
+# Select the Flow Logs tab, and click on "Create Flow Log"
+
+# Name: test-flow
+# Destination log group: LOG_GROUP_NAME
+# IAM Role: flow-logs-test
+
+# Click on Create Flow Log

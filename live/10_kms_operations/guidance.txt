@@ -1,0 +1,14 @@
+# Navigate to the KMS console, and click on Create Key
+# Select Symmetric (the default) and click Next
+
+# Add a name for the key and click Next
+# Select Administrator users and click Next
+# Select Key Usage users and click Next
+# Click Finish
+
+# With the new CMK, you can enable automatic backing key rotation
+# with the following command (manual key rotation = create new CMK)
+aws kms enable-key-rotation --key-id KEYID --region REGION
+
+# The following command will disable a CMK:
+aws kms disable-key --key-id KEYID --region REGION

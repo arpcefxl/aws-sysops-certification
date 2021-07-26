@@ -1,0 +1,13 @@
+# Create a WAF Web ACL
+# Navigate to the WAF&Shield console, and click on Create Web ACL
+# Name the ACL and CloudWatch metric, and select either CloudFront or Regional
+# Click Next
+# Under Rules, click on Add rules->Add Managed Rule Groups
+# Select AWS-Managed rule groups
+# (example) Select Amazon IP reputation list
+# Scroll down and click on Add Rules
+# Click Next
+# Since there is only one rule group, ignore the rule priority
+# Click Next twice
+# If you want to avoid the $5 charge (prorated) for each Web ACL, click cancel
+# Otherwise, click Create Web ACL
